@@ -1,12 +1,12 @@
 resource "aws_instance" "simple_ec2_instance" {
-  ami           = "${var.ubuntu_ami}"
-  instance_type = "${var.instance_type}"
-  subnet_id     = "${var.instance_subnet_id}"
-  key_name      = "${var.aws_key_pair}"
+  ami           = "${var.ec2_ubuntu_ami}"
+  instance_type = "${var.ec2_instance_type}"
+  subnet_id     = "${var.ec2_instance_subnet_id}"
+  key_name      = "${var.ec2_aws_key_pair}"
 
   tags {
-    Name = "${var.instance_name}"
-    Tier = "${var.instance_tier}"
+    Name = "${var.ec2_instance_name}"
+    Tier = "${var.ec2_instance_tier}"
   }
 }
 
